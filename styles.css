@@ -1,0 +1,107 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+*{
+    background-color: #222;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+
+.first{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.head{   
+    margin-top: 10px;
+    font-weight: 600;  
+}
+
+.hleft{
+    width: 180px;
+    margin-left: 10px;
+    background-color: #eee;
+    font-size: 20px;
+    padding: 30px; 
+    cursor: pointer; 
+    color: #222;
+}
+
+.hright{
+    font-size: 20px;
+    font-family: 'Press Start 2P';
+    
+    margin-right: 30px;
+    color: #eee;
+    align-self: top;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    color: #eee;
+}
+
+.mid{
+    background-color: #eee;
+    width: 90px;
+    margin: auto;
+    font-size: 60px;
+    padding: 20px;
+    text-align: center;
+    margin-top: -50px;
+    color: #222;
+}
+
+.line{
+    height: 8px;
+    background-color: #eee;
+    margin-top: 80px;
+}
+.flex2{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.low1{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-left: -30px;
+    margin-right: -80px;
+}
+
+.button2{
+    width: 180px;
+    align-self: center;
+    height: 60px;
+    font-size: 20px;
+    background-color: #eee;
+    font-weight:600 ;
+    cursor: pointer;
+}
+
+.guess{
+    height: 90px;
+    width: 240px;
+    border: 5px solid #eee;
+    color:#eee;
+    font-size: 60px;
+    text-align: center;
+
+}
+
+.low2{
+    margin-right: 150px;
+    font-size: 25px;
+    color: #eee;
+}
+
+
+
+
+
+
