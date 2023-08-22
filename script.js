@@ -8,10 +8,9 @@ document.querySelector('.score').textContent = 0;    📈  📉
 document.querySelector('.guess').value = 23;
 console.log(document.querySelector('.guess').value);
 */
-const secretNumber = Math.trunc(Math.random()*20) +1;
+let secretNumber = Math.trunc(Math.random()*20) +1;
 let score = 20;
-
-document.querySelector('.number').textContent = secretNumber;
+let highscore = 0;
 
 document.querySelector('.button2').addEventListener('click', function(){
     const guess = Number(document.querySelector('.guess').value);
@@ -22,8 +21,14 @@ document.querySelector('.button2').addEventListener('click', function(){
     }
     else if(guess === secretNumber){
         document.querySelector('.p1').textContent = '🎉 Correct Number !';
-        document.querySelector('.b1 ').style.backgroundColor = '#60b347';
-        document.querySelector('.number').style.width = '200px';
+        document.querySelector('body').style.backgroundColor = '#60b347';
+        document.querySelector('.number').style.width = '300px';
+        document.querySelector('.number').textContent = secretNumber;
+
+        if(score > highscore){
+            highscore = score;
+            document.querySelector('.highscore').textContent = score;
+        }
 
     }
     else if(guess > secretNumber){
@@ -57,6 +62,25 @@ document.querySelector('.button2').addEventListener('click', function(){
     }
     
     
+})
+
+document.querySelector('.hleft').addEventListener('click' , function(){
+    score = 20;
+    secretNumber = Math.trunc(Math.random()*20) +1;
+    
+    document.querySelector('.number').textContent = '?';
+    document.querySelector('body').style.backgroundColor = '#222';
+    document.querySelector('.number').style.width = '100px';
+    document.querySelector('.p1').textContent = 'Start guessing...';
+    document.querySelector('.guess').value = '';
+    document.querySelector('.score').textContent = score;
+
+    // if(Number(document.querySelector('.score').textContent) > Number(document.querySelector('.highscore').textContent)){
+    //     document.querySelector('.highscore').textContent = document.querySelector('.score').textContent;
+
+    // }
+    
+
 })
 
 
